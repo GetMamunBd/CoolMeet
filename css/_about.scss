@@ -1,0 +1,114 @@
+.about {
+    margin-top: 150px;
+    margin-bottom: 150px;
+
+    .about-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5% 0 0;
+
+        .about-img {
+            animation: left-slider 1.5s ease .5s;
+        }
+
+        .about-des {
+            padding: 0 0 0 80px;
+            animation: right-slider 1.5s ease .5s;
+        }
+    }
+
+    .about-feature {
+        padding: 80px 5% 40px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 30px;
+
+        .one {
+            box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all .5s;
+            animation: scale 1s ease-in-out 0s infinite alternate;
+
+            h3 {
+                margin-top: 10px;
+                font-size: 1rem;
+                color: #333333;
+                transition: all .5s;
+            }
+
+            &:hover {
+                box-shadow: 0 0 0 1px #d90368;
+                animation: unset;
+            }
+
+            &:hover h3 {
+                color: #d90368;
+            }
+
+            img {
+                transition: all .5s;
+                // animation: scale 1s ease-in-out 0s infinite alternate;
+            }
+
+            &:hover img {
+                transform: scale(.95);
+
+            }
+        }
+    }
+
+    .about-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+/* ************* RESPONSIVE SECTION START *************  */
+
+@media screen and (max-width:991px) {
+    .about {
+        padding: 0 5%;
+    }
+
+    .about .about-info {
+        display: unset;
+        margin: 0 auto;
+
+        .about-img {
+            margin: 0 auto 60px;
+            width: 70%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .about-des {
+            padding: 0;
+            width: 80%;
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+
+    .about .about-feature {
+        padding: 50px 5% 40px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        row-gap: 40px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .about .about-feature {
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        padding: 50px 0 40px;
+    }
+}

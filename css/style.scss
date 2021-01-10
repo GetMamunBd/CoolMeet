@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',
+        sans-serif;
+}
+
+/* **************REUSEABLE ITEMS START ************** */
+span {
+    color: #d90368;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px !important;
+    border: 1px solid #d90368 !important;
+    border-radius: 60px !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .9rem;
+    color: #d90368;
+    font-weight: 500;
+    transition: .5s !important;
+
+    &:hover {
+        background-color: #d90368;
+        color: white;
+    }
+}
+
+.disabled {
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 600;
+    color: rgb(173, 173, 173);
+    padding-top: 10px;
+    cursor: not-allowed;
+}
+
+.info-text {
+    h2 {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+        font-weight: 700;
+    }
+
+    p {
+        padding-top: 15px;
+        line-height: 1.8;
+        color: #8a8a8a;
+        letter-spacing: 1px;
+    }
+}
+
+/* **************REUSEABLE ITEMS END ************** */
+
+@import "./header";
+@import "./about";
+@import "./how_work";
+@import "./what_special";
+@import "./download_app";
+@import "./footer";
+@import "./animation";

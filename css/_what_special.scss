@@ -1,0 +1,82 @@
+$PrimaryColor: #d90368;
+
+.what-special {
+    padding: 150px 5%;
+    text-align: center;
+
+    .info-text {
+        width: 60%;
+        margin: 0 auto 90px;
+    }
+}
+
+.all-special-item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 60px;
+    column-gap: 40px;
+
+    .special-item {
+        padding: 30px 40px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 0 1px rgba(228, 228, 228, 0.6);
+        cursor: pointer;
+        transition: all .5s;
+
+        h3 {
+            margin: 15px 0;
+            color: #333333;
+            transition: all .5s;
+        }
+
+        p {
+            font-size: .9rem;
+            letter-spacing: 1px;
+            line-height: 1.8;
+            color: rgb(161, 161, 161);
+        }
+
+        img {
+            animation: special 1s ease-in-out 0s infinite alternate;
+            transition: all .5s;
+        }
+
+        &:hover {
+            box-shadow: 0 5px 13px rgba(0, 0, 0, 0.1);
+            transform: translateY(-3px);
+        }
+
+        &:hover h3 {
+            color: $PrimaryColor;
+        }
+
+        &:hover img {
+            transform: scale(1.05);
+            animation: unset;
+        }
+    }
+}
+
+
+/* ************* RESPONSIVE SECTION START *************  */
+
+@media screen and (max-width:991px) {
+    .all-special-item {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        row-gap: 50px;
+        column-gap: 40px;
+        padding: 0 5%;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .all-special-item {
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        padding: 0px;
+
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
+}
